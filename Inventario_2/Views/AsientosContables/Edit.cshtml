@@ -1,0 +1,66 @@
+﻿@model Inventario_2.Models.AsientoContable
+
+@{
+    ViewData["Title"] = "Editar Asiento Contable";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="IdMovimiento" />
+
+        <div class="form-group">
+            <label asp-for="Descripcion"></label>
+            <input asp-for="Descripcion" class="form-control" />
+            <span asp-validation-for="Descripcion" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Auxiliar"></label>
+            <input asp-for="Auxiliar" class="form-control" />
+            <span asp-validation-for="Auxiliar" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CuentaDb"></label>
+            <input asp-for="CuentaDb" class="form-control" />
+            <span asp-validation-for="CuentaDb" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CuentaCr"></label>
+            <input asp-for="CuentaCr" class="form-control" />
+            <span asp-validation-for="CuentaCr" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Monto"></label>
+            <input asp-for="Monto" class="form-control" />
+            <span asp-validation-for="Monto" class="text-danger"></span>
+        </div>
+
+        <!-- Agregar campo Estado -->
+        <div class="form-group">
+            <label asp-for="Estado"></label>
+            <input asp-for="Estado" class="form-control" />
+            <span asp-validation-for="Estado" class="text-danger"></span>
+        </div>
+
+        <!-- Agregar campo Moneda -->
+        <div class="form-group">
+            <label asp-for="Moneda"></label>
+            <input asp-for="Moneda" class="form-control" />
+            <span asp-validation-for="Moneda" class="text-danger"></span>
+        </div>
+
+        <!-- Agregar campo Fecha -->
+        <div class="form-group">
+            <label asp-for="Fecha"></label>
+            <input asp-for="Fecha" class="form-control" />
+            <span asp-validation-for="Fecha" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
